@@ -4,8 +4,12 @@ from tempfile import TemporaryFile
 
 
 class Decorators(unittest.TestCase):
-    def test_decorateFunction(self):
-        self.assertFalse(True)
+    def test_unDecoratedFunction(self):
+        self.assertTrue("hello" == self.greet())
+
+    def greet(self):
+        return "hello"
+
 
 
 if __name__ == '__main__':
